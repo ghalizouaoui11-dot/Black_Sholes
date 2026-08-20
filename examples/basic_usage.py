@@ -27,3 +27,21 @@ plot_price_curves(
     option_type="call",
 )
 
+plot_price_heatmap(
+    spot_prices=range(70, 131, 10),
+    volatilities=[0.10, 0.20, 0.30, 0.40, 0.50],
+    option_type="put",
+    strike=model.strike,
+    time_to_expiry=model.time_to_expiry,
+    risk_free_rate=model.risk_free_rate,
+    show=False,
+)
+plot_price_curves(
+    spot_prices=range(70, 131, 10),
+    volatilities=[0.10, 0.20, 0.30, 0.40, 0.50],
+    strike=model.strike,
+    time_to_expiry=model.time_to_expiry,
+    risk_free_rate=model.risk_free_rate,
+    option_type="put",
+)
+
